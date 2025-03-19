@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * This test class explains the `Creating Test Doubles` section.
  *
- * Official documentation: https://docs.mockery.io/en/latest/reference/creating_test_doubles.html
+ * Official documentation: https://docs.mockery.io/en/stable/reference/creating_test_doubles.html
  */
 class A_MakingMockTest extends TestCase
 {
@@ -56,7 +56,7 @@ class A_MakingMockTest extends TestCase
         | To simplify tests, we can chain the `shouldIgnoreMissing()` method to prevent
         | tests from breaking for undefined methods.
         | In this case, undefined methods will return `null`, `0`, `false`, `''`, or `[]` based on their return type.
-        | Please check the returned values here: https://docs.mockery.io/en/latest/reference/creating_test_doubles.html#behavior-modifiers
+        | Please check the returned values here: https://docs.mockery.io/en/stable/reference/creating_test_doubles.html#behavior-modifiers
         |
         | If your code includes validations for their output, such as `!empty()` or `!is_null()`, it may fail.
         */
@@ -185,7 +185,7 @@ class A_MakingMockTest extends TestCase
         |
         | Note: When you create a spy, methods won't work normally, and we can't define expectations like in a mock;
         | they ALWAYS return `null`, `0`, `false`, `''`, or `[]` based on their return type.
-        | Please check the returned values here: https://docs.mockery.io/en/latest/reference/creating_test_doubles.html#behavior-modifiers
+        | Please check the returned values here: https://docs.mockery.io/en/stable/reference/creating_test_doubles.html#behavior-modifiers
         |
         | If your code includes validations for their output, such as `!empty()` or `!is_null()`, it will fail.
         |
