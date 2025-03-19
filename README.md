@@ -32,7 +32,7 @@ vendor/bin/phpunit --filter=<TEST_METHOD_NAME>
 
 ## Read Official Documentation
 
-Of course, this repository cannot replace the [official documentation](https://docs.mockery.io/en/latest/) and does not cover all of PHP Mockery's features. To fully understand Mockery's capabilities, we highly encourage you to read the official documentation. Use this repository as a supplementary resource with simple explanations and prepared tests.
+Of course, this repository cannot replace the [official documentation](https://docs.mockery.io/en/stable/index.html) and does not cover all of PHP Mockery's features. To fully understand Mockery's capabilities, we highly encourage you to read the official documentation. Use this repository as a supplementary resource with simple explanations and prepared tests.
 
 ## Contributing
 
