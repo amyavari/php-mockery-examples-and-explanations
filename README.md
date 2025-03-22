@@ -8,18 +8,18 @@ This repository is designed to explain and test some basic concepts and features
 
 ## How to Use This Repository?
 
-1. Clone the repository to your local machine using the clone button.
-2. Use Composer to install the required dependencies:
-
-   - `mockery/mockery`
-   - `phpunit/phpunit` (as necessary packages)
-   - `laravel/pint` (optional, for code formatting)
-
-   Run the following command:
+1. Clone the repository to your local machine.
+2. Use Composer to install the required dependencies by running the following command:
 
 ```bash
 composer install
 ```
+
+It will install the following dependencies:
+
+- `mockery/mockery` (>v1.6)
+- `phpunit/phpunit` (>12.0 as the testing package)
+- `laravel/pint` (>1.21 for code formatting)
 
 3. Read the documentation for each file or section you want to learn about in the `./tests` directory, and check the main classes in the `./src` directory.  
    The name of each test method represents the concept it will explain and test. Test the code by running the following command:
@@ -29,6 +29,10 @@ vendor/bin/phpunit --filter=<TEST_METHOD_NAME>
 ```
 
 4. Check the output in your command-line interface, including errors, warnings, and `var_dump` outputs.
+
+## Changes
+
+To see updates, what has changed, and when, you can check the [CHANGELOG.md](./CHANGELOG.md) file.
 
 ## Read Official Documentation
 
