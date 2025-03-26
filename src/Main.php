@@ -16,6 +16,7 @@ class Main
             'dependency_one->setNameProperty("Ali")' => $this->dependencyOne->setNameProperty('Ali'),
             'dependency_one->getNameProperty()' => $this->dependencyOne->getNameProperty(),
             'dependency_two->getTwoHundred()' => $this->dependencyTwo->getTwoHundred(),
+            'dependency_two->setPerson()' => $this->dependencyTwo->setPerson('Ali', 'Yavari', 34),
         ];
     }
 }
