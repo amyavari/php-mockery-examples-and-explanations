@@ -19,4 +19,17 @@ class Main
             'dependency_two->setPerson()' => $this->dependencyTwo->setPerson('Ali', 'Yavari', 34),
         ];
     }
+
+    public function repeatedMethodCalls(): array
+    {
+        return [
+            'dependency_one->getPassedNumber(123)-first' => $this->dependencyOne->getPassedNumber(123),
+            'dependency_one->getPassedNumber(123)-second' => $this->dependencyOne->getPassedNumber(123),
+            'dependency_one->getPassedNumber(123)-third' => $this->dependencyOne->getPassedNumber(123),
+            'dependency_one->getPassedNumber(123)-forth' => $this->dependencyOne->getPassedNumber(123),
+            'dependency_one->getOneHundred()-first' => $this->dependencyOne->getOneHundred(),
+            'dependency_one->getOneHundred()-second' => $this->dependencyOne->getOneHundred(),
+            'dependency_one->getOneHundred()-third' => $this->dependencyOne->getOneHundred(),
+        ];
+    }
 }
