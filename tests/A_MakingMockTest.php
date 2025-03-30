@@ -145,6 +145,31 @@ class A_MakingMockTest extends TestCase
         $this->assertInstanceOf(Main::class, $main);
     }
 
+    public function test_full_mock_with_partial_behavior(): void
+    {
+        /*
+        | As an alternative to partial mock: with full mock objects, you can make specific methods execute normally.
+        | Chain `passthru()` on their method call expectations (covered later) to achieve this.
+        */
+        $mockedDependencyOne = Mockery::mock(DependencyOne::class);
+
+        /*
+        | If you remove `passthru()` from any of these, the method won't execute normally and will return:
+        | `null`, `0`, `false`, `''`, or `[]` based on return type.
+        */
+        $mockedDependencyOne->shouldReceive('getPassedNumber')->passthru();
+        $mockedDependencyOne->shouldReceive('getOneHundred')->passthru();
+        $mockedDependencyOne->shouldReceive('setNameProperty')->passthru();
+        $mockedDependencyOne->shouldReceive('getNameProperty')->passthru();
+
+        $main = new Main($mockedDependencyOne, new DependencyTwo);
+        $output = $main->run();
+
+        var_dump($output);
+
+        $this->assertInstanceOf(Main::class, $main);
+    }
+
     public function test_create_one_line_mock(): void
     {
         /*
