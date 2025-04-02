@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Official documentation: https://docs.mockery.io/en/stable/reference/creating_test_doubles.html
  */
-class A_MakingMockTest extends TestCase
+class A_MakingMock_Test extends TestCase
 {
     public function test_create_full_mock_with_default_behavior(): void
     {

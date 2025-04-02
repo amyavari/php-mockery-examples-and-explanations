@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Official documentation: https://docs.mockery.io/en/stable/reference/expectations.html
  */
-class B_Expectations_PartOneTest extends TestCase
+class B_Expectations_Part1_Test extends TestCase
 {
     public function test_define_expectation_for_one_method_call(): void
     {
