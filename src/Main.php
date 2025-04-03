@@ -20,13 +20,13 @@ class Main
         ];
     }
 
-    public function repeatedMethodCalls(): array
+    public function repeatedMethodCalls($num1 = 123, $num2 = 123, $num3 = 123, $num4 = 123): array
     {
         return [
-            'dependency_one->getPassedNumber(123)-first' => $this->dependencyOne->getPassedNumber(123),
-            'dependency_one->getPassedNumber(123)-second' => $this->dependencyOne->getPassedNumber(123),
-            'dependency_one->getPassedNumber(123)-third' => $this->dependencyOne->getPassedNumber(123),
-            'dependency_one->getPassedNumber(123)-forth' => $this->dependencyOne->getPassedNumber(123),
+            'dependency_one->getPassedNumber('.$num1.')-first' => $this->dependencyOne->getPassedNumber($num1),
+            'dependency_one->getPassedNumber('.$num2.')-second' => $this->dependencyOne->getPassedNumber($num2),
+            'dependency_one->getPassedNumber('.$num3.')-third' => $this->dependencyOne->getPassedNumber($num3),
+            'dependency_one->getPassedNumber('.$num4.')-forth' => $this->dependencyOne->getPassedNumber($num4),
             'dependency_one->getOneHundred()-first' => $this->dependencyOne->getOneHundred(),
             'dependency_one->getOneHundred()-second' => $this->dependencyOne->getOneHundred(),
             'dependency_one->getOneHundred()-third' => $this->dependencyOne->getOneHundred(),
