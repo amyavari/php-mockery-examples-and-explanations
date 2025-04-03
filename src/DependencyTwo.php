@@ -10,4 +10,9 @@ class DependencyTwo
     {
         return 200;
     }
+
+    public function setPerson(string $name, string $lastName, int $age): string
+    {
+        return sprintf('%s %s age: %s', $name, $lastName, $age);
+    }
 }

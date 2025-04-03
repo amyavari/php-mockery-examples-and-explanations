@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Official documentation: https://docs.mockery.io/en/stable/reference/creating_test_doubles.html
  */
-class A_MakingMockTest extends TestCase
+class A_MakingMock_Test extends TestCase
 {
     public function test_create_full_mock_with_default_behavior(): void
     {
@@ -136,6 +136,31 @@ class A_MakingMockTest extends TestCase
         $mockedDependencyOne->shouldReceive('getOneHundred')->andReturn(20);
         $mockedDependencyOne->shouldReceive('setNameProperty')->andReturn('Someone else');
         $mockedDependencyOne->shouldReceive('getNameProperty')->andReturn('Yavari');
+
+        $main = new Main($mockedDependencyOne, new DependencyTwo);
+        $output = $main->run();
+
+        var_dump($output);
+
+        $this->assertInstanceOf(Main::class, $main);
+    }
+
+    public function test_full_mock_with_partial_behavior(): void
+    {
+        /*
+        | As an alternative to partial mock: with full mock objects, you can make specific methods execute normally.
+        | Chain `passthru()` on their method call expectations (covered later) to achieve this.
+        */
+        $mockedDependencyOne = Mockery::mock(DependencyOne::class);
+
+        /*
+        | If you remove `passthru()` from any of these, the method won't execute normally and will return:
+        | `null`, `0`, `false`, `''`, or `[]` based on return type.
+        */
+        $mockedDependencyOne->shouldReceive('getPassedNumber')->passthru();
+        $mockedDependencyOne->shouldReceive('getOneHundred')->passthru();
+        $mockedDependencyOne->shouldReceive('setNameProperty')->passthru();
+        $mockedDependencyOne->shouldReceive('getNameProperty')->passthru();
 
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
