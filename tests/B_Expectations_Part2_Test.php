@@ -45,7 +45,7 @@ class B_Expectations_Part2_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->repeatedMethodCalls();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -79,7 +79,7 @@ class B_Expectations_Part2_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->repeatedMethodCalls();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -105,7 +105,7 @@ class B_Expectations_Part2_Test extends TestCase
         $main = new Main(new DependencyOne, $mockedDependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -141,7 +141,7 @@ class B_Expectations_Part2_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }

@@ -42,7 +42,7 @@ class A_MakingMock_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output); // The output of calling `DependencyOne` methods is as above!
+        dump($output); // The output of calling `DependencyOne` methods is as above!
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -73,7 +73,7 @@ class A_MakingMock_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -111,7 +111,7 @@ class A_MakingMock_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -140,7 +140,7 @@ class A_MakingMock_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -165,7 +165,7 @@ class A_MakingMock_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -186,7 +186,7 @@ class A_MakingMock_Test extends TestCase
         $main = new Main($mockedDependencyOne, new DependencyTwo);
         $output = $main->run();
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }
@@ -222,7 +222,7 @@ class A_MakingMock_Test extends TestCase
         $spyDependencyOne->shouldHaveReceived('setNameProperty', ['Ali']);
         $spyDependencyOne->shouldHaveReceived('getNameProperty');
 
-        var_dump($output);
+        dump($output);
 
         $this->assertInstanceOf(Main::class, $main);
     }

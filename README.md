@@ -26,7 +26,7 @@ git clone https://github.com/amyavari/php-mockery-examples-and-explanations.git
 composer install
 ```
 
-It will install `mockery/mockery`, `phpunit/phpunit` and `laravel/pint`.
+It will install `mockery/mockery`, `phpunit/phpunit`, `laravel/pint` and `symfony/var-dumper`.
 
 3. Explore the [`./tests`](./tests/) directory, where each file corresponds to a specific section of Mockery official documentation. Each test file contains multiple test cases which the method names represents the concept it will explain and test.
 
@@ -40,7 +40,7 @@ It will install `mockery/mockery`, `phpunit/phpunit` and `laravel/pint`.
    - Feel free to modify the tests as instructed in the doc comments or as needed to explore different scenarios
    - Don't forget to check [`./src`](./src) directory to understand the code being tested
 
-4. Check the output in your command-line interface, including errors, warnings, and `var_dump` outputs.
+4. Check the output in your command-line interface, including errors, warnings, and `dump` outputs.
 
 ## Table of Contents
 
