@@ -58,6 +58,8 @@ Each section below links to the relevant part of the [Mockery documentation](htt
 - **[Declaring Call Count Expectations](https://docs.mockery.io/en/stable/reference/expectations.html#declaring-call-count-expectations)** → [`B_Expectations_Part3_Test.php`](./tests/B_Expectations_Part3_Test.php)
 - **[Multiple Calls with Different Expectations](https://docs.mockery.io/en/stable/reference/expectations.html#multiple-calls-with-different-expectations)** → [`B_Expectations_Part3_Test.php`](./tests/B_Expectations_Part3_Test.php)
 - **[Expectation Declaration Utilities](https://docs.mockery.io/en/stable/reference/expectations.html#expectation-declaration-utilities)** → [`B_Expectations_Part3_Test.php`](./tests/B_Expectations_Part3_Test.php)
+- **[Argument Validation](https://docs.mockery.io/en/stable/reference/argument_validation.html)** → [`C_Argument_Validation_Test.php`](./tests/C_Argument_Validation_Test.php)
+- **[Alternative shouldReceive Syntax](https://docs.mockery.io/en/stable/reference/alternative_should_receive_syntax.html)** → [`D_Alternative_Should_Test.php`](./tests/D_Alternative_Should_Test.php)
 
 ## Changes
 
