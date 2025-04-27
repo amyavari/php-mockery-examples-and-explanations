@@ -18,4 +18,14 @@ class MainTwo
             'dependency_three->multipleByTen(4)' => $number,
         ];
     }
+
+    public function chainedMethods(): array
+    {
+        // Output is:  ['number' => 10, 'string' => 'Ali', 'bool' => true, 'final' => 'Wow']
+        $output = $this->dependencyThree->addNumber(10)->addString('Ali')->addBool(true)->finalAdd('Wow');
+
+        return [
+            'dependency_three->addNumber(10)->addString("Ali")->addBool(true)->finalAdd("Wow")' => $output,
+        ];
+    }
 }

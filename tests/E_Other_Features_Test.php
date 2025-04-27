@@ -50,4 +50,34 @@ class E_Other_Features_Test extends TestCase
 
         $this->assertInstanceOf(MainTwo::class, $main);
     }
+
+    public function test_mocking_chained_methods_and_fluent_interfaces(): void
+    {
+        /*
+        | For chained methods (fluent interface), Mockery lets you mock
+        | the entire chain at once without needing to mock each method call.
+        */
+        $mockedDependencyThree = Mockery::mock(DependencyThree::class);
+
+        /*
+        | For chained methods, use this format:
+        | - `$mocked->shouldReceive('methodOne->methodTwo->...')`; (method names without parentheses/arguments, separated by `->`)
+        | - Only validate arguments on the final method call if needed
+        | - Only set the final return value for the entire chain
+        |
+        | This single line replaces these 4:
+        |   $mockedDependencyThree->shouldReceive('addNumber')->andReturnSelf();
+        |   $mockedDependencyThree->shouldReceive('addString')->andReturnSelf();
+        |   $mockedDependencyThree->shouldReceive('addBool')->andReturnSelf();
+        |   $mockedDependencyThree->shouldReceive('finalAdd')->with('Wow')->andReturn(['nothing' => 'nothing']);
+        */
+        $mockedDependencyThree->shouldReceive('addNumber->addString->addBool->finalAdd')->with('Wow')->andReturn(['nothing' => 'nothing']);
+
+        $main = new MainTwo($mockedDependencyThree);
+        $output = $main->chainedMethods();
+
+        dump($output);
+
+        $this->assertInstanceOf(MainTwo::class, $main);
+    }
 }
