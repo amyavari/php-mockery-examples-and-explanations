@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * Only used by `MainTwo` class.
+ */
 class DependencyThree
 {
     protected array $data;

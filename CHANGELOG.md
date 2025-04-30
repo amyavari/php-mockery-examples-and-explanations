@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0] - 2025-04-30
+
+### Added
+
+- Explanations and examples for [Preserving Pass-By-Reference Method Parameter Behavior]
+- Explanations and examples for [Mocking Demeter Chains And Fluent Interfaces]
+- Explanations and examples for [PHP Magic Methods]
+
 ## [1.3.0] - 2025-04-21
 
 ### Added
@@ -34,10 +42,14 @@ All notable changes to this project will be documented in this file.
 - The first release of this package.
 - Includes explanations and examples for [making mock/spy] objects.
 
+[1.4.0]: https://github.com/amyavari/php-mockery-examples-and-explanations/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/amyavari/php-mockery-examples-and-explanations/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/amyavari/php-mockery-examples-and-explanations/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/amyavari/php-mockery-examples-and-explanations/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/amyavari/php-mockery-examples-and-explanations/compare/d6e594f...v1.0.0
+[Preserving Pass-By-Reference Method Parameter Behavior]: https://docs.mockery.io/en/stable/reference/pass_by_reference_behaviours.html
+[Mocking Demeter Chains And Fluent Interfaces]: https://docs.mockery.io/en/stable/reference/demeter_chains.html
+[PHP Magic Methods]: https://docs.mockery.io/en/stable/reference/magic_methods.html
 [Argument Validation]: https://docs.mockery.io/en/stable/reference/argument_validation.html
 [Alternative shouldReceive Syntax for mocks]: https://docs.mockery.io/en/stable/reference/alternative_should_receive_syntax.html
 [Alternative shouldReceive Syntax for spies]: https://docs.mockery.io/en/stable/reference/spies.html#alternative-shouldreceive-syntax

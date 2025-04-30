@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * Only used by `E_Other_Features_Test` class.
+ */
 class MainTwo
 {
     public function __construct(protected DependencyThree $dependencyThree) {}
@@ -31,8 +34,9 @@ class MainTwo
 
     public function magicOrVirtualMethod(): array
     {
+        // Output is: ['dependency_three->notExistedMethod(123, "Ali")' => 'notExistedMethod']
         return [
-            'dependency_three->notExistedMethod(123, "Ali")' => $this->dependencyThree->notExistedMethod(123, "Ali"),
+            'dependency_three->notExistedMethod(123, "Ali")' => $this->dependencyThree->notExistedMethod(123, 'Ali'),
         ];
     }
 }
