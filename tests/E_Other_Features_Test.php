@@ -80,4 +80,32 @@ class E_Other_Features_Test extends TestCase
 
         $this->assertInstanceOf(MainTwo::class, $main);
     }
+
+    public function test_mocking_magic_or_virtual_methods(): void
+    {
+        /*
+        | For magic methods, declare expectations exactly like virtual methods -
+        | just mock them like normal method calls.
+
+        | Note: Virtual methods are methods that don't exist in the real class.
+        |       This is useful when your code depends on undeveloped classes.
+        |       Mockery doesn't check method existence - it only verifies
+        |       declared expectations and returns the specified values.
+        */
+        $mockedDependencyThree = Mockery::mock(DependencyThree::class);
+
+        /*
+        | In `DependencyThree`, we have `__call()` magic method, not `notExistedMethod()`.
+        | It doesn't matter if you remove `__call()` or not - Mockery will still
+        | return the expectation for `notExistedMethod()` call we declared here.
+        */
+        $mockedDependencyThree->shouldReceive('notExistedMethod')->with(123, 'Ali')->andReturn('I don\'n exist! Can you believe?');
+
+        $main = new MainTwo($mockedDependencyThree);
+        $output = $main->magicOrVirtualMethod();
+
+        dump($output);
+
+        $this->assertInstanceOf(MainTwo::class, $main);
+    }
 }

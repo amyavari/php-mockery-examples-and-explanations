@@ -40,4 +40,9 @@ class DependencyThree
 
         return $this->data;
     }
+
+    public function __call($name, $arguments)
+    {
+        return $name;
+    }
 }

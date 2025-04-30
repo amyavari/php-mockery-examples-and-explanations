@@ -28,4 +28,11 @@ class MainTwo
             'dependency_three->addNumber(10)->addString("Ali")->addBool(true)->finalAdd("Wow")' => $output,
         ];
     }
+
+    public function magicOrVirtualMethod(): array
+    {
+        return [
+            'dependency_three->notExistedMethod(123, "Ali")' => $this->dependencyThree->notExistedMethod(123, "Ali"),
+        ];
+    }
 }
