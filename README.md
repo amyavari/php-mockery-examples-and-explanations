@@ -60,6 +60,10 @@ Each section below links to the relevant part of the [Mockery documentation](htt
 - **[Expectation Declaration Utilities](https://docs.mockery.io/en/stable/reference/expectations.html#expectation-declaration-utilities)** → [`B_Expectations_Part3_Test.php`](./tests/B_Expectations_Part3_Test.php)
 - **[Argument Validation](https://docs.mockery.io/en/stable/reference/argument_validation.html)** → [`C_Argument_Validation_Test.php`](./tests/C_Argument_Validation_Test.php)
 - **[Alternative shouldReceive Syntax](https://docs.mockery.io/en/stable/reference/alternative_should_receive_syntax.html)** → [`D_Alternative_Should_Test.php`](./tests/D_Alternative_Should_Test.php)
+- **[Preserving Pass-By-Reference Method Parameter Behavior](https://docs.mockery.io/en/stable/reference/pass_by_reference_behaviours.html)** → [`E_Other_Features_Test.php`](./tests/E_Other_Features_Test.php)
+- **[Mocking Demeter Chains And Fluent Interfaces](https://docs.mockery.io/en/stable/reference/demeter_chains.html)** → [`E_Other_Features_Test.php`](./tests/E_Other_Features_Test.php)
+- **[PHP Magic Methods](https://docs.mockery.io/en/stable/reference/magic_methods.html)** → [`E_Other_Features_Test.php`](./tests/E_Other_Features_Test.php)
+
 
 ## Changes
 
