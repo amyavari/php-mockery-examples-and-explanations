@@ -230,6 +230,11 @@ class A_MakingMock_Test extends TestCase
     public function test_create_mock_for_final_classes_and_methods(): void
     {
         /*
+        | Note: You can bypass mock restrictions (mentioned below)
+        |       using this package: https://github.com/nunomaduro/mock-final-classes
+        */
+
+        /*
         | As Mockery states in its official documentation, it creates a new class
         | and extends our dependency class/interface/abstract class to create a mock object from it.
         | This new class will override methods based on our expectations, so:
