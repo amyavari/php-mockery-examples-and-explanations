@@ -1,0 +1,19 @@
+There are some fantastic things to know and consider
+
+4- For final classes/methods the recommended way is using interface. Type hint that interface in your code and mock this interface.
+Remember it doesn't matter whether the method exist in the mock object. Mockery is make a virtual method.
+Alternatively, if you don't have type hint, you can use proxied mock.
+See: https://docs.mockery.io/en/stable/reference/final_methods_classes.html
+
+6- It's important to use Mockery::close() in the tearDown() method of your test case. Or use MockeryPHPUnitIntegration trait in your base test case.
+See: https://docs.mockery.io/en/stable/reference/phpunit_integration.html
+
+8- If you create an object inside the method and you can't use DI, you can use instance mocking. (Not Recommended)
+Note: This is a warning about your tight coupling and it's recommended to improve and change your design.
+See: https://docs.mockery.io/en/stable/reference/instance_mocking.html
+
+9- We can mock protected methods too. (Not Recommended)
+See: https://docs.mockery.io/en/stable/reference/protected_methods.html
+
+10- We can mock public static methods too.
+See: https://docs.mockery.io/en/stable/reference/public_static_properties.html
